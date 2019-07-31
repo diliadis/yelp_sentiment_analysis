@@ -1,0 +1,10 @@
+__pycache__
+.idea
+*.pyc
+.DS_Store
+main.py
+ml_yelp.py
+ml_yelp2.py
+pre_main.py
+text_yelp.py
+text_yelp2.py
