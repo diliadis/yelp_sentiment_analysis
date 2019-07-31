@@ -57,7 +57,7 @@ absolute values (1-5). The 5-star rating class has over 26k instances while the 
 * 5-star: 26062 instances
 
 <p align="center">
-    <img src="stars_distribution.png">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/plots/stars_distribution.png">
 </p>
 
 To mitigate the negative effects of class imbalance, we randomly sampled the 5 classes and ended up with a total of
@@ -68,15 +68,15 @@ In all three plots that are presented below we could see that they follow a powe
 reviews for the mexican restaurants in the Las Vegas area are not characterized as funny, useful or cool
 
 <p align="center">
-    <img src="Distribution_of_useful_reviews.png">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/plots/Distribution_of_useful_reviews.png">
 </p>
 
 <p align="center">
-    <img src="Distribution_of_funny_reviews.png">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/plots/Distribution_of_funny_reviews.png">
 </p>
 
 <p align="center">
-    <img src="Distribution_of_cool_reviews.png">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/plots/Distribution_of_cool_reviews.png">
 </p>
 
 
