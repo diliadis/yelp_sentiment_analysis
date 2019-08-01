@@ -84,25 +84,25 @@ We also created several wordclouds. The five different word clouds correspond to
 
 1-star rating wordcloud
 <p align="center">
-    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated1text.png">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_1_text.png">
 </p>
 
 2-star rating wordcloud
 <p align="center">
-    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated2text.png">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_2_text.png">
 </p>
 
 3-star rating wordcloud
 <p align="center">
-    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated3text.png">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_3_text.png">
 </p>
 
 4-star rating wordcloud
 <p align="center">
-    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated4text.png">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_4_text.png">
 </p>
 
 5-star rating wordcloud
 <p align="center">
-    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated5text.png">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_5_text.png">
 </p>
