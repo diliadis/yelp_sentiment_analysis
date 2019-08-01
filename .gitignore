@@ -8,3 +8,5 @@ ml_yelp2.py
 pre_main.py
 text_yelp.py
 text_yelp2.py
+preproc_df.pkl
+sampled_df.pkl
