@@ -80,4 +80,29 @@ reviews for the mexican restaurants in the Las Vegas area are not characterized 
 </p>
 
 
-We also created several wordclouds
+We also created several wordclouds. The five different word clouds correspond to the 5 different star rating classes.
+
+1-star rating wordcloud
+<p align="center">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated1text.png">
+</p>
+
+2-star rating wordcloud
+<p align="center">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated2text.png">
+</p>
+
+3-star rating wordcloud
+<p align="center">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated3text.png">
+</p>
+
+4-star rating wordcloud
+<p align="center">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated4text.png">
+</p>
+
+5-star rating wordcloud
+<p align="center">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated5text.png">
+</p>
