@@ -82,27 +82,27 @@ reviews for the mexican restaurants in the Las Vegas area are not characterized 
 
 We also created several wordclouds. The five different word clouds correspond to the 5 different star rating classes.
 
-1-star rating wordcloud
+**1-star rating wordcloud**
 <p align="center">
     <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_1_text.png">
 </p>
 
-2-star rating wordcloud
+**2-star rating wordcloud**
 <p align="center">
     <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_2_text.png">
 </p>
 
-3-star rating wordcloud
+**3-star rating wordcloud**
 <p align="center">
     <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_3_text.png">
 </p>
 
-4-star rating wordcloud
+**4-star rating wordcloud**
 <p align="center">
     <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_4_text.png">
 </p>
 
-5-star rating wordcloud
+**5-star rating wordcloud**
 <p align="center">
     <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_5_text.png">
 </p>
@@ -172,3 +172,224 @@ the average rating of each restaurant and the number of reviews of each restaura
 <p align="center">
     <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/plots/heat_map_stars_business.png">
 </p>
+
+
+### Experiments and Results
+
+The results of our experiments show that in the multi-class case the svm algorithm had a hard-time distinguishing the
+intermediate classes 2 and 4, something that was also obvious in the confusion matrices. For that reason, we used weights
+on these two classes in an attempt to penalize misclassifications of the two intermediate classes. The train-test split had
+a ratio of 75-25.
+
+Features code names:
+
+* A) Entities features
+    * User (U): avg_stars
+    * Business (B): avg_stars, review_count
+
+* B) Text features
+    * F1: Tf-idf
+    * F2: Bi-Tri-grams
+    
+* C) Lexicon scores
+    * F3: Textblob polarity scores
+    * F4: Vader score (neg, pos, compound)
+    * F5: SentiWordNet score
+    
+
+<table style="width: 543px;">
+<tbody>
+<tr>
+<td style="width: 88px;">&nbsp;</td>
+<td style="width: 65px;" colspan="3">Multiclass (3-class)</td>
+<td style="width: 65px;" colspan="3">Binary</td>
+<td style="width: 65px;" colspan="3">Multiclass (5-class)</td>
+</tr>
+<tr>
+<td style="width: 88px;">&nbsp;</td>
+<td style="width: 150px;" colspan="3">SVM (weight adjustment)</td>
+<td style="width: 154px;" colspan="3">SVM</td>
+<td style="width: 146px;" colspan="3">SVM (weight adjustment)</td>
+</tr>
+<tr>
+<td style="width: 88px;">&nbsp;</td>
+<td style="width: 65px;">Precision</td>
+<td style="width: 46px;">Recall</td>
+<td style="width: 39px;">F1</td>
+<td style="width: 65px;">Precision</td>
+<td style="width: 46px;">Recall</td>
+<td style="width: 43px;">F1</td>
+<td style="width: 65px;">Precision</td>
+<td style="width: 46px;">Recall</td>
+<td style="width: 35px;">F1</td>
+</tr>
+<tr>
+<td style="width: 88px;">F1</td>
+<td style="width: 65px;">0.80</td>
+<td style="width: 46px;">0.78</td>
+<td style="width: 39px;">0.78</td>
+<td style="width: 65px;">0.94</td>
+<td style="width: 46px;">0.94</td>
+<td style="width: 43px;">0.94</td>
+<td style="width: 65px;">0.55</td>
+<td style="width: 46px;">0.52</td>
+<td style="width: 35px;">0.52</td>
+</tr>
+<tr>
+<td style="width: 88px;">F2</td>
+<td style="width: 65px;">0.79</td>
+<td style="width: 46px;">0.79</td>
+<td style="width: 39px;">0.79</td>
+<td style="width: 65px;">0.95</td>
+<td style="width: 46px;">0.95</td>
+<td style="width: 43px;">0.94</td>
+<td style="width: 65px;">0.52</td>
+<td style="width: 46px;">0.52</td>
+<td style="width: 35px;">0.52</td>
+</tr>
+<tr>
+<td style="width: 88px;">F3</td>
+<td style="width: 65px;">0.68</td>
+<td style="width: 46px;">0.64</td>
+<td style="width: 39px;">0.65</td>
+<td style="width: 65px;">0.90</td>
+<td style="width: 46px;">0.90</td>
+<td style="width: 43px;">0.90</td>
+<td style="width: 65px;">0.43</td>
+<td style="width: 46px;">0.36</td>
+<td style="width: 35px;">0.36</td>
+</tr>
+<tr>
+<td style="width: 88px;">F4</td>
+<td style="width: 65px;">0.68</td>
+<td style="width: 46px;">0.63</td>
+<td style="width: 39px;">0.64</td>
+<td style="width: 65px;">0.91</td>
+<td style="width: 46px;">0.90</td>
+<td style="width: 43px;">0.90</td>
+<td style="width: 65px;">0.43</td>
+<td style="width: 46px;">0.38</td>
+<td style="width: 35px;">0.37</td>
+</tr>
+<tr>
+<td style="width: 88px;">F5</td>
+<td style="width: 65px;">0.50</td>
+<td style="width: 46px;">0.46</td>
+<td style="width: 39px;">0.42</td>
+<td style="width: 65px;">0.81</td>
+<td style="width: 46px;">0.81</td>
+<td style="width: 43px;">0.81</td>
+<td style="width: 65px;">0.26</td>
+<td style="width: 46px;">0.29</td>
+<td style="width: 35px;">0.25</td>
+</tr>
+<tr>
+<td style="width: 88px;">F1+U+B</td>
+<td style="width: 65px;">0.79</td>
+<td style="width: 46px;">0.78</td>
+<td style="width: 39px;">0.79</td>
+<td style="width: 65px;">0.91</td>
+<td style="width: 46px;">0.91</td>
+<td style="width: 43px;">0.91</td>
+<td style="width: 65px;">0.56</td>
+<td style="width: 46px;">0.54</td>
+<td style="width: 35px;">0.55</td>
+</tr>
+<tr>
+<td style="width: 88px;">F2+U+B</td>
+<td style="width: 65px;">0.81</td>
+<td style="width: 46px;">0.80</td>
+<td style="width: 39px;">0.81</td>
+<td style="width: 65px;">0.95</td>
+<td style="width: 46px;">0.95</td>
+<td style="width: 43px;">0.95</td>
+<td style="width: 65px;">0.53</td>
+<td style="width: 46px;">0.53</td>
+<td style="width: 35px;">0.53</td>
+</tr>
+<tr>
+<td style="width: 88px;">F3+U+B&nbsp;</td>
+<td style="width: 65px;">0.73&nbsp;</td>
+<td style="width: 46px;">0.70&nbsp;</td>
+<td style="width: 39px;">0.70&nbsp;</td>
+<td style="width: 65px;">0.93&nbsp;</td>
+<td style="width: 46px;">&nbsp;0.93&nbsp;</td>
+<td style="width: 43px;">&nbsp;0.93</td>
+<td style="width: 65px;">0.49&nbsp;</td>
+<td style="width: 46px;">0.42&nbsp;</td>
+<td style="width: 35px;">0.42</td>
+</tr>
+<tr>
+<td style="width: 88px;">F4+U+B&nbsp;</td>
+<td style="width: 65px;">0.73&nbsp;</td>
+<td style="width: 46px;">0.70&nbsp;</td>
+<td style="width: 39px;">0.71&nbsp;</td>
+<td style="width: 65px;">0.93&nbsp;</td>
+<td style="width: 46px;">&nbsp;0.93&nbsp;</td>
+<td style="width: 43px;">&nbsp;0.93</td>
+<td style="width: 65px;">0.49&nbsp;</td>
+<td style="width: 46px;">0.44&nbsp;</td>
+<td style="width: 35px;">0.45&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 88px;">F5+U+B&nbsp;</td>
+<td style="width: 65px;">0.66&nbsp;</td>
+<td style="width: 46px;">0.63&nbsp;</td>
+<td style="width: 39px;">0.64&nbsp;</td>
+<td style="width: 65px;">0.86&nbsp;</td>
+<td style="width: 46px;">&nbsp;0.86&nbsp;</td>
+<td style="width: 43px;">&nbsp;0.85</td>
+<td style="width: 65px;">0.42&nbsp;</td>
+<td style="width: 46px;">0.39&nbsp;</td>
+<td style="width: 35px;">0.39&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 88px;">F1+F2+U+B</td>
+<td style="width: 65px;">0.82&nbsp;</td>
+<td style="width: 46px;">0.81&nbsp;</td>
+<td style="width: 39px;">0.81&nbsp;</td>
+<td style="width: 65px;">0.95&nbsp;</td>
+<td style="width: 46px;">&nbsp;0.95&nbsp;</td>
+<td style="width: 43px;">&nbsp;0.95&nbsp;</td>
+<td style="width: 65px;">0.55&nbsp;</td>
+<td style="width: 46px;">0.54&nbsp;</td>
+<td style="width: 35px;">0.54&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 88px;">F3+F4+U+B&nbsp;</td>
+<td style="width: 65px;">0.75&nbsp;</td>
+<td style="width: 46px;">0.72</td>
+<td style="width: 39px;">0.72&nbsp;</td>
+<td style="width: 65px;">0.95&nbsp;</td>
+<td style="width: 46px;">&nbsp;0.95&nbsp;</td>
+<td style="width: 43px;">&nbsp;0.95</td>
+<td style="width: 65px;">0.50&nbsp;</td>
+<td style="width: 46px;">0.46&nbsp;</td>
+<td style="width: 35px;">0.46</td>
+</tr>
+<tr>
+<td style="width: 88px;">F3+F5+U+B&nbsp;</td>
+<td style="width: 65px;">0.72&nbsp;</td>
+<td style="width: 46px;">0.69&nbsp;</td>
+<td style="width: 39px;">0.70&nbsp;</td>
+<td style="width: 65px;">0.92&nbsp;</td>
+<td style="width: 46px;">&nbsp;0.92&nbsp;</td>
+<td style="width: 43px;">&nbsp;0.92</td>
+<td style="width: 65px;">0.46&nbsp;</td>
+<td style="width: 46px;">0.43&nbsp;</td>
+<td style="width: 35px;">0.43&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 88px;">F4+F5+U+B&nbsp;</td>
+<td style="width: 65px;">0.74&nbsp;</td>
+<td style="width: 46px;">0.71&nbsp;</td>
+<td style="width: 39px;">0.72&nbsp;</td>
+<td style="width: 65px;">0.93&nbsp;</td>
+<td style="width: 46px;">&nbsp;0.93&nbsp;</td>
+<td style="width: 43px;">&nbsp;0.93</td>
+<td style="width: 65px;">0.48&nbsp;</td>
+<td style="width: 46px;">0.45&nbsp;</td>
+<td style="width: 35px;">0.45&nbsp;</td>
+</tr>
+</tbody>
+</table>
