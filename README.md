@@ -106,3 +106,69 @@ We also created several wordclouds. The five different word clouds correspond to
 <p align="center">
     <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/word_clouds/rated_5_text.png">
 </p>
+
+
+## Text preprocessing and extraction of sentiment info
+
+There are two main approaches used to extract information about the sentiment in text. The first approach uses scores 
+about the individual words and the second approach uses the characteristics and structure of the text. The dictionary-based
+approach involves calculating the semantic orientation of words or phrases in the document using word dictionaries for 
+which the semantic score of emotional information has already been determined. Such dictionaries can be created manually
+or even automatically, using seed words to extend the list of words. The total score of a sentence is essentially the 
+sum of scores of the individual words that make up the sentence.
+
+On the other hand, the approach of classification using the text's characteristics, is based on machine learning models
+that are trained on datasets with known scores. The most common technique used in the literature, are SVMs that are trained
+in datasets comprised of features that are produced from unigrams, bigrams, word frequencies, tfidf vectors etc. Methods 
+that use supervised learning can detect the polarity of text with very high accuracies.
+
+There are also hybrid methods, that use combinations of the aforementioned approaches to achieve even better results.
+
+### Text preprocessing
+
+For this step we relied heavily in the [NLTK library](https://www.nltk.org/). This library provides tools for processing 
+language data with capabilities for classification, tokenization, stemming, tagging, parsing and semantic reasoning.
+
+Initially, we use the word_tokenize function to split each review into a list it's words. Then, each word in the list is
+converted to lowecase letters, and words that appear frequently in English are removed from it. Finnaly, we use a Porter
+Stemmer and a word Lemmatizer to reduce the total number of distinct words 
+
+### Extraction of sentiment info
+
+The extraction of emotional information from texts can be achieved in a variety of methods that have been reported in the 
+literature. We chose to use the bag of words model with tfidfs and n-grams, as well as dictionaries such as SentiWordNet 
+and pre-trained dictionaries.
+
+## Classification
+
+The purpose of this study was to investigatye which approach can yield better results in the extraction of sentiment 
+information in order to predict the star rating of reviews. We experimented with the dictinary-based approach, the
+text characteristics extraction approach, as well as various combinations of them. Results from the literature suggested
+that the hybrid method yields the best results and that the unigrams are the strongest features.
+
+The most commonly used classification algorithm that yields the best results is the SVM and, although various tests were
+performed with other algorithms (AdaBoost, Logistic Regression) it was confirmed that SVMs give the best results. Therefore,
+we used that classifier in all our experiments to find the best feature combination. Finally, we used the best classifier 
+and feature combination to train binary problems (class 1 as negative and class 5 as positive) as well as multi-class
+problems (class 3 as neutral to form a total of 3 classes or all 5 classes to form a 5 class multi-class problem).
+
+
+### Feature selection
+
+The features used for training can be divided into 3 categories:
+
+* A) Text features: tfidf, bigrams, trigrams.
+* B) Dictionary features: scores from SentiWordNet, TextBlob and Vader.
+* C) Features provided from yelp for the Reviews, Users and Restaurants.
+
+To select the best attributes available to the three files (Reviews, Users and Restaurants), a Chi-squared test was applied
+(visualization in a heatmap presented below). The attributes that we eventually used were the averate rating of each user,
+the average rating of each restaurant and the number of reviews of each restaurant.
+
+<p align="center">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/plots/heat_map_stars_users.png">
+</p>
+
+<p align="center">
+    <img src="https://github.com/diliadis/yelp_sentiment_analysis/blob/master/plots/heat_map_stars_business.png">
+</p>
