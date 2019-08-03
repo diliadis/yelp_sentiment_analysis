@@ -197,19 +197,19 @@ Features code names:
     * F5: SentiWordNet score
     
 
-<table style="width: 543px;">
+<table style="width: 550px;">
 <tbody>
 <tr>
 <td style="width: 88px;">&nbsp;</td>
-<td style="width: 65px;" colspan="3">Multiclass (3-class)</td>
-<td style="width: 65px;" colspan="3">Binary</td>
-<td style="width: 65px;" colspan="3">Multiclass (5-class)</td>
+<td style="width: 150px;" colspan="3">Multiclass (3-class)</td>
+<td style="width: 154px;" colspan="3">Binary</td>
+<td style="width: 153px;" colspan="3">Multiclass (5-class)</td>
 </tr>
 <tr>
 <td style="width: 88px;">&nbsp;</td>
 <td style="width: 150px;" colspan="3">SVM (weight adjustment)</td>
 <td style="width: 154px;" colspan="3">SVM</td>
-<td style="width: 146px;" colspan="3">SVM (weight adjustment)</td>
+<td style="width: 153px;" colspan="3">SVM (weight adjustment)</td>
 </tr>
 <tr>
 <td style="width: 88px;">&nbsp;</td>
@@ -221,7 +221,7 @@ Features code names:
 <td style="width: 43px;">F1</td>
 <td style="width: 65px;">Precision</td>
 <td style="width: 46px;">Recall</td>
-<td style="width: 35px;">F1</td>
+<td style="width: 42px;">F1</td>
 </tr>
 <tr>
 <td style="width: 88px;">F1</td>
@@ -233,7 +233,7 @@ Features code names:
 <td style="width: 43px;">0.94</td>
 <td style="width: 65px;">0.55</td>
 <td style="width: 46px;">0.52</td>
-<td style="width: 35px;">0.52</td>
+<td style="width: 42px;">0.52</td>
 </tr>
 <tr>
 <td style="width: 88px;">F2</td>
@@ -245,7 +245,7 @@ Features code names:
 <td style="width: 43px;">0.94</td>
 <td style="width: 65px;">0.52</td>
 <td style="width: 46px;">0.52</td>
-<td style="width: 35px;">0.52</td>
+<td style="width: 42px;">0.52</td>
 </tr>
 <tr>
 <td style="width: 88px;">F3</td>
@@ -257,7 +257,7 @@ Features code names:
 <td style="width: 43px;">0.90</td>
 <td style="width: 65px;">0.43</td>
 <td style="width: 46px;">0.36</td>
-<td style="width: 35px;">0.36</td>
+<td style="width: 42px;">0.36</td>
 </tr>
 <tr>
 <td style="width: 88px;">F4</td>
@@ -269,7 +269,7 @@ Features code names:
 <td style="width: 43px;">0.90</td>
 <td style="width: 65px;">0.43</td>
 <td style="width: 46px;">0.38</td>
-<td style="width: 35px;">0.37</td>
+<td style="width: 42px;">0.37</td>
 </tr>
 <tr>
 <td style="width: 88px;">F5</td>
@@ -281,7 +281,7 @@ Features code names:
 <td style="width: 43px;">0.81</td>
 <td style="width: 65px;">0.26</td>
 <td style="width: 46px;">0.29</td>
-<td style="width: 35px;">0.25</td>
+<td style="width: 42px;">0.25</td>
 </tr>
 <tr>
 <td style="width: 88px;">F1+U+B</td>
@@ -293,7 +293,7 @@ Features code names:
 <td style="width: 43px;">0.91</td>
 <td style="width: 65px;">0.56</td>
 <td style="width: 46px;">0.54</td>
-<td style="width: 35px;">0.55</td>
+<td style="width: 42px;">0.55</td>
 </tr>
 <tr>
 <td style="width: 88px;">F2+U+B</td>
@@ -305,7 +305,7 @@ Features code names:
 <td style="width: 43px;">0.95</td>
 <td style="width: 65px;">0.53</td>
 <td style="width: 46px;">0.53</td>
-<td style="width: 35px;">0.53</td>
+<td style="width: 42px;">0.53</td>
 </tr>
 <tr>
 <td style="width: 88px;">F3+U+B&nbsp;</td>
@@ -317,7 +317,7 @@ Features code names:
 <td style="width: 43px;">&nbsp;0.93</td>
 <td style="width: 65px;">0.49&nbsp;</td>
 <td style="width: 46px;">0.42&nbsp;</td>
-<td style="width: 35px;">0.42</td>
+<td style="width: 42px;">0.42</td>
 </tr>
 <tr>
 <td style="width: 88px;">F4+U+B&nbsp;</td>
@@ -329,7 +329,7 @@ Features code names:
 <td style="width: 43px;">&nbsp;0.93</td>
 <td style="width: 65px;">0.49&nbsp;</td>
 <td style="width: 46px;">0.44&nbsp;</td>
-<td style="width: 35px;">0.45&nbsp;</td>
+<td style="width: 42px;">0.45&nbsp;</td>
 </tr>
 <tr>
 <td style="width: 88px;">F5+U+B&nbsp;</td>
@@ -341,7 +341,7 @@ Features code names:
 <td style="width: 43px;">&nbsp;0.85</td>
 <td style="width: 65px;">0.42&nbsp;</td>
 <td style="width: 46px;">0.39&nbsp;</td>
-<td style="width: 35px;">0.39&nbsp;</td>
+<td style="width: 42px;">0.39&nbsp;</td>
 </tr>
 <tr>
 <td style="width: 88px;">F1+F2+U+B</td>
@@ -353,7 +353,7 @@ Features code names:
 <td style="width: 43px;">&nbsp;0.95&nbsp;</td>
 <td style="width: 65px;">0.55&nbsp;</td>
 <td style="width: 46px;">0.54&nbsp;</td>
-<td style="width: 35px;">0.54&nbsp;</td>
+<td style="width: 42px;">0.54&nbsp;</td>
 </tr>
 <tr>
 <td style="width: 88px;">F3+F4+U+B&nbsp;</td>
@@ -365,7 +365,7 @@ Features code names:
 <td style="width: 43px;">&nbsp;0.95</td>
 <td style="width: 65px;">0.50&nbsp;</td>
 <td style="width: 46px;">0.46&nbsp;</td>
-<td style="width: 35px;">0.46</td>
+<td style="width: 42px;">0.46</td>
 </tr>
 <tr>
 <td style="width: 88px;">F3+F5+U+B&nbsp;</td>
@@ -377,7 +377,7 @@ Features code names:
 <td style="width: 43px;">&nbsp;0.92</td>
 <td style="width: 65px;">0.46&nbsp;</td>
 <td style="width: 46px;">0.43&nbsp;</td>
-<td style="width: 35px;">0.43&nbsp;</td>
+<td style="width: 42px;">0.43&nbsp;</td>
 </tr>
 <tr>
 <td style="width: 88px;">F4+F5+U+B&nbsp;</td>
@@ -389,7 +389,90 @@ Features code names:
 <td style="width: 43px;">&nbsp;0.93</td>
 <td style="width: 65px;">0.48&nbsp;</td>
 <td style="width: 46px;">0.45&nbsp;</td>
-<td style="width: 35px;">0.45&nbsp;</td>
+<td style="width: 42px;">0.45&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 88px;">F3+F4+F5+U+B</td>
+<td style="width: 65px;">0.74</td>
+<td style="width: 46px;">0.82</td>
+<td style="width: 39px;">&nbsp;0.82</td>
+<td style="width: 65px;">0.96</td>
+<td style="width: 46px;">0.94</td>
+<td style="width: 43px;">0.94&nbsp;</td>
+<td style="width: 65px;">0.49&nbsp;</td>
+<td style="width: 46px;">0.46&nbsp;</td>
+<td style="width: 42px;">0.46&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 88px;">F1+F2+F3+F4+U+B</td>
+<td style="width: 65px;">0.82&nbsp;</td>
+<td style="width: 46px;">0.82&nbsp;</td>
+<td style="width: 39px;">&nbsp;0.82</td>
+<td style="width: 65px;">0.96</td>
+<td style="width: 46px;">0.96&nbsp;</td>
+<td style="width: 43px;">0.95&nbsp;</td>
+<td style="width: 65px;">0.55&nbsp;</td>
+<td style="width: 46px;">0.55&nbsp;</td>
+<td style="width: 42px;">0.55&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 88px;">F1+F2+F3+F5+U+B</td>
+<td style="width: 65px;">0.82&nbsp;</td>
+<td style="width: 46px;">0.82&nbsp;</td>
+<td style="width: 39px;">&nbsp;0.82</td>
+<td style="width: 65px;">0.96&nbsp;</td>
+<td style="width: 46px;">0.96&nbsp;</td>
+<td style="width: 43px;">0.96&nbsp;</td>
+<td style="width: 65px;">0.55&nbsp;</td>
+<td style="width: 46px;">0.55&nbsp;</td>
+<td style="width: 42px;">0.55&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 88px;">F1+F2+F4+F5+U+B</td>
+<td style="width: 65px;">0.82&nbsp;</td>
+<td style="width: 46px;">0.82&nbsp;</td>
+<td style="width: 39px;">&nbsp;0.82</td>
+<td style="width: 65px;">0.96&nbsp;</td>
+<td style="width: 46px;">0.96&nbsp;</td>
+<td style="width: 43px;">0.96&nbsp;</td>
+<td style="width: 65px;">0.56&nbsp;</td>
+<td style="width: 46px;">0.56&nbsp;</td>
+<td style="width: 42px;">0.56&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 88px;">F1+F2+F3+F4+F5+U+B</td>
+<td style="width: 65px;">0.82&nbsp;</td>
+<td style="width: 46px;">0.82&nbsp;</td>
+<td style="width: 39px;">&nbsp;0.82</td>
+<td style="width: 65px;">0.96&nbsp;</td>
+<td style="width: 46px;">0.96&nbsp;</td>
+<td style="width: 43px;">0.96&nbsp;</td>
+<td style="width: 65px;">0.56&nbsp;</td>
+<td style="width: 46px;">0.56&nbsp;</td>
+<td style="width: 42px;">0.56&nbsp;</td>
 </tr>
 </tbody>
 </table>
+
+
+We observe that in every case the hybrid approach that utilizes all the available features achieves the best results.
+
+### Binary Classification
+
+In this case we observe that the best performance (0.96) is achieved when we combine the text attributes and the selected
+entities with dictionary scores. The next best results are achieved with text and entity attributes, but only with bi-tri-grams.
+In this case, the literature is confirmed, as n-grams emerge as the dominant features. By using individual dictionary scores, 
+Vader performs better than others.
+
+### Multiclass (3-class)
+
+In this case we too observe that the best performance (0.82) is achieved in the same setting as with the previous problem 
+formulation. The text best results come from combining text attributes with entity attributes, while text attributes seem
+to work very well alone. However, individual dictionaries in this case perform significantly worse than all other combinations,
+with TextBlob doing better than the other two.
+
+### Multiclass (5-class)
+
+Again, in this case the best performance (0.56) is achieved when we combine the text attributes and the selected
+entities with dictionary scores. Very good results are obtained by combining text attributes and entities, and in this 
+case the use of tf-idf vectors as input attributes returns very good results.
